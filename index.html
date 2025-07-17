@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>GraphScript Launcher</title>
+    <link rel="icon" type="image/svg+xml" href="/GraphScript.png" />
+
+    <meta name="title" content="GraphScript">
+    <meta name="description" content="GraphScript is a general-purpose visual scripting editor that lets you build logic by connecting visual nodes. No code, just flow.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://graphscript-labs.github.io/">
+    <meta property="og:title" content="GraphScript">
+    <meta property="og:description" content="GraphScript is a general-purpose visual scripting editor that lets you build logic by connecting visual nodes. No code, just flow.">
+    <meta property="og:image" content="https://github.com/GraphScript-Labs/.github/blob/main/Banner.png?raw=true">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://graphscript-labs.github.io/">
+    <meta name="twitter:title" content="GraphScript">
+    <meta name="twitter:description" content="GraphScript is a general-purpose visual scripting editor that lets you build logic by connecting visual nodes. No code, just flow.">
+    <meta name="twitter:image" content="https://github.com/GraphScript-Labs/.github/blob/main/Banner.png?raw=true">
+
+    <style>
+      .pywebview-drag-region {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: transparent;
+        opacity: 0;
+        height: 100%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="pywebview-drag-region"></span>
+    <div id="root"></div>
+
+    <script>
+      document.addEventListener("contextmenu", (event) => {
+        // event.preventDefault();
+      });
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

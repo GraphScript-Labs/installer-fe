@@ -1,0 +1,17 @@
+.app-window {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.app-content > * {
+  pointer-events: auto;
+}
+

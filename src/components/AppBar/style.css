@@ -1,0 +1,83 @@
+.app-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  align-items: start;
+}
+
+.window-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+.window-action-button {
+  --window-button-size: 0.75rem;
+  --button-icon-size: 0.25rem;
+  
+  height: var(--window-button-size);
+  width: var(--window-button-size);
+  border-radius: var(--window-button-size);;
+  background-color: var(--color-white);
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.window-action-button:hover::after {
+  content: "";
+  background: #FFFFFF;
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+  border-radius: var(--button-icon-size);
+}
+
+.window-action-button[data-action="close"] {
+  background-color: var(--color-danger);
+}
+
+.window-action-button[data-action="minimize"] {
+  background-color: var(--color-warning);
+}
+
+.window-action-button[data-action="maximize"] {
+  background-color: var(--color-success);
+}
+
+.window-action-button:disabled {
+  opacity: 0.5;
+  background-color: var(--color-white);
+  cursor: not-allowed;
+}
+
+.version-info {
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 200;
+  pointer-events: all;
+}
+
+.version-button {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.version-button:hover {
+  opacity: 1;
+}
+
+.version-button:active {
+  transform: scale(0.5);
+}
+

@@ -1,0 +1,158 @@
+.install {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  pointer-events: none;
+}
+
+.install > * {
+  pointer-events: auto;
+}
+
+.install-scroll {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  background: var(--color-black);
+  cursor: pointer;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  z-index: 10;
+}
+
+.install-scroll:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-up {
+  top: 1rem;
+}
+
+.scroll-down {
+  bottom: 1rem;
+}
+
+.install-scroll:hover {
+  opacity: 1;
+}
+
+.install-scroll:active {
+  scale: 0.5;
+}
+
+.install-scroll-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.install-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  pointer-events: none;
+}
+
+.install-content > * {
+  pointer-events: auto;
+}
+
+.install-button {
+  height: 3rem;
+  aspect-ratio: 1;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.install-button:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.install-button-icon {
+  height: 100%;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: #ffffff11;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.install-button-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  text-wrap: nowrap;
+  transform: translateX(-50%) translateY(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.install-button:hover .install-button-text {
+  transform: translateX(-50%) translateY(0.5rem);
+  opacity: 1;
+}
+
+.install-button:hover .install-button-icon {
+  background: #ffffff22;
+}
+
+.install-button:active .install-button-icon {
+  scale: 0.5;
+}
+
+.install-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffffff22;
+  border-radius: 2rem;
+  display: block;
+  opacity: 0;
+}
+
+.install-spinner.active {
+  opacity: 1;
+}
+
+.installing-text {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.installing-text.active {
+  opacity: 1;
+}
+
