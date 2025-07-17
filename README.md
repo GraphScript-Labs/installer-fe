@@ -1,8 +1,9 @@
-# GraphScript Launcher
+# GraphScript Installer Frontend
 
-GraphScript Launcher is a lightweight, self-updating desktop interface for launching and managing GraphScript projects. It integrates a Python backend (PyWebView) with a modern React-based frontend to provide a smooth and responsive user experience.
+This is the user interface for the GraphScript Installer, designed to help users select a valid data directory and initiate setup. It communicates with the backend to trigger configuration and build processes.
 
-## Notes
-
-- This is the frontend repository for GraphScript Launcher.
+# Features
+	- Clean, minimal UI for installation
+	- Directory selection with validation
+	- Latest version checks
 
